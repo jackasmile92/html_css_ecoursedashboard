@@ -1,0 +1,40 @@
+$backgroung_color_gray: #E5E5E5;
+$backgroung_color_white: white;
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+    cursor: default;
+}
+
+:focus {
+    outline: none;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr 6fr 3fr;
+
+    height: 100vh;
+}
+
+.left-panel, .right-part{
+    background: $backgroung_color_white;
+}
+
+.middle-part{
+    background: $backgroung_color_gray;
+}
+
