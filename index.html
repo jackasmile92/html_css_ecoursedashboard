@@ -6,58 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecourse Dashboard</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <div class="wrapper">
         <div class="left-panel">
             <div class="container">
-                <div class="left-panel__logo">
-                    <img class="logo__img" src="" alt="">
-                </div>
+                <div class="left-panel__top">
+                    <div class="left-panel__logo">
+                        <div class="left-panel__logo-square">
+                            <div>O</div>
+                        </div>
+                        <div class="left-panel__logo-text">Ohara</div>
+                    </div>
 
-                <div class="left-panel__join">
-                    <button class="left-panel_-join-button">Join a course</button>
+                    <div class="left-panel__join">
+                        <button class="left-panel__join-button">Join a course</button>
+                    </div>
                 </div>
-
                 <div class="left-panel__menu">
-                    <div class="left-panel__menu-item">
-                        <div class="menu-item__logo"><img class="menu-item__logo-img" src="" alt=""></div>
+                    <a class="left-panel__menu-item" href="#">
+                        <div class="menu-item__logo">
+                            <i class="fa fa-columns" aria-hidden="true"></i>
+                        </div>
                         <div class="menu-item__name">Dashboard</div>
-                    </div>
-                    <div class="left-panel__menu-item">
-                        <div class="menu-item__logo"><img class="menu-item__logo-img" src="" alt=""></div>
+                    </a>
+                    <a class="left-panel__menu-item left-panel__menu-item--active" href="#">
+                        <div class="menu-item__logo">
+                            <i class="fa fa-th-large" aria-hidden="true"></i>
+                        </div>
                         <div class="menu-item__name">All courses</div>
-                    </div>
-                    <div class="left-panel__menu-item">
-                        <div class="menu-item__logo"><img class="menu-item__logo-img" src="" alt=""></div>
+                    </a>
+                    <a class="left-panel__menu-item" href="#">
+                        <div class="menu-item__logo">
+                            <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        </div>
                         <div class="menu-item__name">Resources</div>
-                    </div>
-                    <div class="left-panel__menu-item">
-                        <div class="menu-item__logo"><img class="menu-item__logo-img" src="" alt=""></div>
+                    </a>
+                    <a class="left-panel__menu-item" href="#">
+                        <div class="menu-item__logo">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
                         <div class="menu-item__name">Friends</div>
-                    </div>
-                    <div class="left-panel__menu-item">
-                        <div class="menu-item__logo"><img class="menu-item__logo-img" src="" alt=""></div>
+                    </a>
+                    <a class="left-panel__menu-item" href="#">
+                        <div class="menu-item__logo">
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        </div>
                         <div class="menu-item__name">Chats</div>
-                    </div>
-                    <div class="left-panel__menu-item">
-                        <div class="menu-item__logo"><img class="menu-item__logo-img" src="" alt=""></div>
+                    </a>
+                    <a class="left-panel__menu-item" href="#">
+                        <div class="menu-item__logo">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </div>
                         <div class="menu-item__name">Settings</div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="left-panel__upgrade">
-                    <div class="container">
-                        <div class="left-panel__upgrade-logo">
-                            <img class="left-panel__upgrade-img" src="" alt="">
-                        </div>
-                        <div class="left-panel__upgrade-text">
-                            Upgrade to for more resources
-                        </div>
-                        <div class="left-panel__upgrade-button-wrap">
-                            <button class="left-panel__upgrade-button">Upgrade</button>
-                        </div>
+                    <div class="left-panel__upgrade-logo">
+                        <img class="left-panel__upgrade-img" src="./src/img/svg/Frame.svg" alt="">
+                    </div>
+                    <div class="left-panel__upgrade-text">
+                        Upgrade to for more resources
+                    </div>
+                    <div class="left-panel__upgrade-button-wrap">
+                        <button class="left-panel__upgrade-button">Upgrade</button>
                     </div>
                 </div>
             </div>

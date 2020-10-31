@@ -1,6 +1,39 @@
 $backgroung_color_gray: #E5E5E5;
 $backgroung_color_white: white;
 
+$banner-gray: #F5F5FB;
+
+$font-color-white: white;
+$font-color-gray: #8DA1B5;
+$font-color-gray2:#778DAD;
+$font-color-dark: #272829;
+
+$main-color-purple: #5E81F4;
+
+$padding-top: 24px;
+$padding-bottom: 24px;
+
+%left-button {
+    height: 48px;
+    background: $main-color-purple;
+    color: $font-color-white;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap');
+
+
 body,
 html {
     padding: 0px;
@@ -17,24 +50,171 @@ a {
     cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.wrapper{
+.wrapper {
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: 2fr 6fr 3fr;
 
     height: 100vh;
+
+    min-height: 500px;
 }
 
-.left-panel, .right-part{
+.left-panel,
+.right-part {
     background: $backgroung_color_white;
 }
 
-.middle-part{
+.middle-part {
     background: $backgroung_color_gray;
 }
 
+.left-panel {
+
+    & .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-top: $padding-top;
+
+        &-square {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: $main-color-purple;
+            color: $font-color-white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: Playfair Display;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        &-text {
+            margin-top: 2px;
+            margin-left: 16px;
+
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            display: flex;
+            align-items: center;
+
+            color: $main-color-purple;
+        }
+    }
+
+    &__join {
+        margin-top: 20px;
+
+        &-button {
+            width: 192px;
+            @extend %left-button;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        max-height: 350px;
+
+        &-item {
+            color: $font-color-gray;
+            display: flex;
+            flex-direction: row;
+            height: 30px;
+            align-items: center;
+
+            &--active {
+                color: $font-color-dark;
+                border-right: 4px solid $main-color-purple;
+                cursor: default;
+            }
+
+        }
+    }
+
+    $margin-pic: 30px;
+
+    &__upgrade {
+        height: 180px;
+        width: 150px;
+
+        background: $banner-gray;
+        border-radius: 12px;
+        margin-bottom: $padding-bottom;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: $margin-pic;
+
+        &-logo {
+            margin-top: -$margin-pic;
+        }
+
+        &-img {
+            width: 60px;
+            height: auto;
+        }
+
+        &-text {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: $font-color-gray2;
+            text-align: center;
+
+            margin-top: 20px;
+        }
+
+        &-button {
+            margin-top: 10px;
+            width: 100px;
+            @extend %left-button;
+        }
+    }
+}
+
+.menu-item {
+    &__logo {
+        margin-left: 50px;
+        margin-right: 25px;
+    }
+
+    &__name {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
