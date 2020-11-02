@@ -75,7 +75,12 @@ a {
     background: $backgroung_color_gray;
     display: grid;
     grid-template-rows: 1fr 6fr;
+    height: 100vh;
+    overflow-y: scroll;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
 }
 
@@ -86,7 +91,6 @@ a {
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
     }
 
@@ -119,11 +123,15 @@ a {
             font-style: normal;
             font-weight: 500;
             font-size: 24px;
+
+            & div {
+                margin-top: -4px;
+            }
         }
 
         &-text {
             margin-top: 2px;
-            margin-left: 16px;
+            margin-left: 10px;
 
             font-family: Inter;
             font-style: normal;
@@ -147,17 +155,24 @@ a {
     }
 
     &__menu {
-        width: 100%;
         max-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
 
         &-item {
             color: $font-color-gray;
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
             height: 30px;
             align-items: center;
+            justify-content: center;
+            position: relative;
 
-            &:hover{
+
+
+            &:hover {
                 color: $font-color-dark;
             }
 
@@ -173,6 +188,13 @@ a {
     $margin-pic: 30px;
 
     &__upgrade {
+
+        &-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
         height: 180px;
         width: 150px;
 
@@ -217,6 +239,7 @@ a {
     &__logo {
         margin-left: 50px;
         margin-right: 25px;
+        text-align: right;
     }
 
     &__name {
@@ -282,7 +305,6 @@ a {
     }
 }
 
-
 .courses {
 
     &__nav {
@@ -301,12 +323,16 @@ a {
         font-family: Inter;
         font-style: normal;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 21px;
 
         height: 26px;
         width: auto;
         color: $font-color-gray;
+
+        &:hover {
+            color: $main-color-purple;
+        }
 
         &--active {
             color: $main-color-purple;
@@ -347,7 +373,6 @@ a {
     }
 
 }
-
 
 .courses {
     display: grid;
@@ -508,4 +533,251 @@ a {
         background-image: url('../src/img/png/image\ 21.png');
 
     }
+}
+
+$rght-part-mrgleft:32px;
+
+.right-part {
+    height: 100vh;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    & .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-top: $padding-top;
+        margin-bottom: 20px;
+    }
+
+    &__progress,
+    &__tasks {
+        margin-left: $rght-part-mrgleft;
+    }
+
+    &__item-title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+}
+
+.profile {
+    &__photo {
+        margin-left: $rght-part-mrgleft;
+
+        &-img {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+        }
+    }
+
+    &__name {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 26px;
+        color: $font-color-dark;
+    }
+
+    &__tip {
+        margin-left: 20px;
+
+        & i {
+            font-size: 16px;
+            color: $font-color-dark;
+        }
+    }
+}
+
+.right-part__course {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 17px;
+    width: 100%;
+    max-width: 312px;
+
+    position: relative;
+
+    &-logo {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+
+        &--blue {
+            background: #EEF2FD;
+            color: #5E81F4;
+        }
+
+        &--green {
+            background: #D5F5FB;
+            color: #0CC3E7;
+        }
+
+        &--orange {
+            background: #FFEFD6;
+            color: #FFAE33;
+        }
+
+    }
+
+    &-info {
+        margin-left: 15px;
+    }
+
+    &-name {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: $font-color-dark;
+    }
+
+    &-date,
+    &-difficulty {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 17px;
+        color: #83919E;
+        margin-top: 5px;
+    }
+
+    &-progress {
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+
+        width: 104px;
+        height: 8px;
+        border-radius: 21px;
+
+        &--blue {
+            background: #EEF2FD;
+
+            & .right-part__course-bar {
+                background: #5E81F4;
+            }
+        }
+
+        &--green {
+            background: #D5F5FB;
+
+            & .right-part__course-bar {
+                background: #0CC3E7;
+            }
+        }
+
+        &--orange {
+            background: #FFEFD6;
+
+            & .right-part__course-bar {
+                background: #FFAE33;
+            }
+        }
+
+    }
+}
+
+.right-part__course-bar {
+
+    height: 8px;
+    border-radius: 21px;
+
+
+    &--one {
+        width: 80px
+    }
+
+    &--two {
+        width: 40px;
+    }
+
+    &--three {
+        width: 60px;
+    }
+}
+
+.right-part__banner {
+    margin-left: $rght-part-mrgleft;
+}
+
+.banner {
+    margin-top: 34px;
+    width: 300px;
+    height: 232px;
+    background-image: url(../src/img/png/download.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 14px;
+
+    &__link {
+        width: 40px;
+        height: 40px;
+        background: $backgroung_color_white;
+
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 10px;
+
+        &-logo {
+            width: auto;
+            height: 20px;
+        }
+
+        & i {
+            font-size: 20px;
+        }
+
+        &s {
+            display: flex;
+            flex-direction: row;
+            margin-left: 24px;
+            margin-top: 16px;
+        }
+    }
+
+    &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 133% */
+
+        color: $font-color-verydark;
+
+        margin-left: 24px;
+    }
+
 }
