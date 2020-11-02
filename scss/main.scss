@@ -552,20 +552,30 @@ $rght-part-mrgleft:32px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+
     }
 
     &__profile {
+        position: fixed;
+        z-index: 99;
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
-        margin-top: $padding-top;
         margin-bottom: 20px;
+        padding-top: 12px;
+        height: 80px;
+        background-color: $backgroung_color_white;
     }
 
     &__progress,
     &__tasks {
         margin-left: $rght-part-mrgleft;
+    }
+
+    &__progress{
+        margin-top: 122px;
     }
 
     &__item-title {
@@ -817,9 +827,9 @@ $rght-part-mrgleft:32px;
     flex-direction: column;
     margin-left: -70%;
     z-index: 100;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.profile__dropdown-logout{
+.profile__dropdown-logout {
     border-top: 1px solid $font-color-gray2;
 }
