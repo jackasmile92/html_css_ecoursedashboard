@@ -73,9 +73,10 @@ a {
 
 .middle-part {
     background: $backgroung_color_gray;
-display: grid;
-grid-template-rows: 1fr 6fr;
-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+
+
 }
 
 .left-panel {
@@ -155,6 +156,10 @@ height: 100vh;
             flex-direction: row;
             height: 30px;
             align-items: center;
+
+            &:hover{
+                color: $font-color-dark;
+            }
 
             &--active {
                 color: $font-color-dark;
@@ -353,13 +358,14 @@ height: 100vh;
         margin-right: 32px;
         margin-top: 20px;
         margin-bottom: $padding-bottom;
+
         display: grid;
         grid-gap: 20px;
         grid-template:
             "big big"
             "small1 small2";
 
-        
+
     }
 
 
@@ -375,11 +381,131 @@ height: 100vh;
         grid-area: big;
     }
 
+    &:nth-child(1) {
+        background-image: url('../src/img/png/image\ 20.png');
+    }
+
     &:nth-child(2) {
         grid-area: small1;
+        background-image: url('../src/img/png/image\ 23.png');
     }
 
     &:nth-child(3) {
         grid-area: small2;
+        background-image: url('../src/img/png/image\ 24.png');
+    }
+
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    & .container {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    $margin-course: 30px;
+
+    &__top {
+
+        &-left {
+            margin: $margin-course;
+        }
+
+        &-right {
+            margin: $margin-course;
+
+            & .course__size {
+                float: right;
+            }
+        }
+    }
+
+    &__bottom {
+
+
+        &-left {
+            margin: $margin-course;
+            position: relative;
+
+            & .course__run-button {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        &-right {
+            margin: $margin-course;
+            position: relative;
+
+            & .course__teacher {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+.course {
+    &__name {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 29px;
+        color: $font-color-white;
+    }
+
+    &__lesson-number {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: $font-color-white;
+        opacity: .8;
+    }
+
+    &__size {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: $font-color-white;
+        opacity: .8;
+        margin-top: 5px;
+    }
+
+    &__run-button {
+        border: none;
+
+        width: 43px;
+        height: 43px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+
+        & i {
+            width: 18px;
+            height: 18px;
+            color: $font-color-white;
+            margin-top: 3px;
+            margin-left: 2px;
+        }
+    }
+
+    &__teacher {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid white;
+        background-image: url('../src/img/png/image\ 21.png');
+
     }
 }

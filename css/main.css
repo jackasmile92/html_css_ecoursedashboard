@@ -53,7 +53,6 @@ a {
   background: #E5E5E5;
   display: grid;
   grid-template-rows: 1fr 6fr;
-  height: 100vh;
 }
 
 .left-panel .container {
@@ -126,6 +125,10 @@ a {
   flex-direction: row;
   height: 30px;
   align-items: center;
+}
+
+.left-panel__menu-item:hover {
+  color: #272829;
 }
 
 .left-panel__menu-item--active {
@@ -302,16 +305,121 @@ a {
 
 .course {
   background: white;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .course--big {
   grid-area: big;
 }
 
+.course:nth-child(1) {
+  background-image: url("../src/img/png/image 20.png");
+}
+
 .course:nth-child(2) {
   grid-area: small1;
+  background-image: url("../src/img/png/image 23.png");
 }
 
 .course:nth-child(3) {
   grid-area: small2;
+  background-image: url("../src/img/png/image 24.png");
+}
+
+.course .container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.course__top-left {
+  margin: 30px;
+}
+
+.course__top-right {
+  margin: 30px;
+}
+
+.course__top-right .course__size {
+  float: right;
+}
+
+.course__bottom-left {
+  margin: 30px;
+  position: relative;
+}
+
+.course__bottom-left .course__run-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.course__bottom-right {
+  margin: 30px;
+  position: relative;
+}
+
+.course__bottom-right .course__teacher {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.course__name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  color: white;
+}
+
+.course__lesson-number {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: white;
+  opacity: .8;
+}
+
+.course__size {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: white;
+  opacity: .8;
+  margin-top: 5px;
+}
+
+.course__run-button {
+  border: none;
+  width: 43px;
+  height: 43px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.course__run-button i {
+  width: 18px;
+  height: 18px;
+  color: white;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+
+.course__teacher {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-image: url("../src/img/png/image 21.png");
 }
