@@ -675,3 +675,43 @@ a {
   color: #011F3B;
   margin-left: 24px;
 }
+
+/*menu*/
+.profile__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile__dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 100px;
+}
+
+.profile__dropdown-menu a {
+  color: #778DAD;
+  background-color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+
+.profile__dropdown-menu a:hover {
+  color: #272829;
+  background-color: #E5E5E5;
+}
+
+.profile__dropdown:hover .profile__dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: -70%;
+  z-index: 100;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile__dropdown-logout {
+  border-top: 1px solid #778DAD;
+}

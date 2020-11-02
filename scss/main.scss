@@ -781,3 +781,45 @@ $rght-part-mrgleft:32px;
     }
 
 }
+
+/*menu*/
+
+
+.profile__dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile__dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100px;
+
+    & a {
+        color: $font-color-gray2;
+        background-color: $backgroung_color_white;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 30px;
+        padding-left: 20px;
+
+        &:hover {
+            color: $font-color-dark;
+            background-color: $backgroung_color_gray;
+        }
+    }
+}
+
+.profile__dropdown:hover .profile__dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: -70%;
+    z-index: 100;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.profile__dropdown-logout{
+    border-top: 1px solid $font-color-gray2;
+}
