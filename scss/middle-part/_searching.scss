@@ -1,0 +1,30 @@
+.top-menu__searching {
+    width: 50%;
+    height: 56px;
+    background: $backgroung_color_white;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    & i {
+        color: #AAB8C6;
+        width: 20px;
+        height: 20px;
+        margin-left: 23px;
+        margin-right: 14px;
+    }
+
+    &-input {
+        width: inherit;
+        margin-right: 23px;
+        border: none;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: $font-color-dark;
+    }
+}

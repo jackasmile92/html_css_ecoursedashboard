@@ -1,0 +1,51 @@
+@import './../common/variables';
+
+$margin-pic: 30px;
+
+
+.left-panel__upgrade {
+
+    &-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    height: 180px;
+    width: 150px;
+
+    background: $banner-gray;
+    border-radius: 12px;
+    margin-bottom: $padding-bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $margin-pic;
+
+    &-logo {
+        margin-top: -$margin-pic;
+    }
+
+    &-img {
+        width: 60px;
+        height: auto;
+    }
+
+    &-text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $font-color-gray2;
+        text-align: center;
+
+        margin-top: 20px;
+    }
+
+    &-button {
+        margin-top: 10px;
+        width: 100px;
+        @extend %left-button;
+    }
+}

@@ -1,0 +1,54 @@
+$rght-part-mrgleft:32px;
+
+@import './right-part/banner';
+@import './right-part/course';
+@import './right-part/profile';
+
+.right-part {
+    height: 100vh;
+    overflow-y: scroll;
+    background: $backgroung_color_white;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__profile {
+        position: fixed;
+        z-index: 99;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-top: 12px;
+        height: 80px;
+        background-color: $backgroung_color_white;
+    }
+
+    &__progress,
+    &__tasks {
+        margin-left: $rght-part-mrgleft;
+    }
+
+    &__progress{
+        margin-top: 122px;
+    }
+
+    &__item-title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+}

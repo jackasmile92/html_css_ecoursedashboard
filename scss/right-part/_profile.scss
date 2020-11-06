@@ -1,0 +1,32 @@
+@import './bar';
+
+.profile {
+    &__photo {
+        margin-left: $rght-part-mrgleft;
+
+        &-img {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+        }
+    }
+
+    &__name {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 26px;
+        color: $font-color-dark;
+    }
+
+    &__tip {
+        margin-left: 20px;
+
+        & i {
+            font-size: 16px;
+            color: $font-color-dark;
+        }
+    }
+}

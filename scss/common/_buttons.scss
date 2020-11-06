@@ -1,0 +1,17 @@
+@import './variables';
+
+%left-button{
+    background: $main-color-purple;
+    color: $font-color-white;
+    height: 48px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+}

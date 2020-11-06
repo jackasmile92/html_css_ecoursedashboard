@@ -1,0 +1,54 @@
+@import './color-vars';
+
+.right-part__course-progress {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+
+    width: 104px;
+    height: 8px;
+    border-radius: 21px;
+
+    &--blue {
+        background: $one-light;
+        & .right-part__course-bar {
+            background: $one-darker;
+        }
+    }
+
+    &--green {
+        background: $two-light;
+
+        & .right-part__course-bar {
+            background: $two-darker;
+        }
+    }
+
+    &--orange {
+        background: $three-light;
+
+        & .right-part__course-bar {
+            background: $three-dark;
+        }
+    }
+
+}
+
+.right-part__course-bar {
+
+    height: 8px;
+    border-radius: 21px;
+
+
+    &--one {
+        width: 80px
+    }
+
+    &--two {
+        width: 40px;
+    }
+
+    &--three {
+        width: 60px;
+    }
+}

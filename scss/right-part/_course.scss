@@ -1,0 +1,62 @@
+@import './color-vars';
+
+.right-part__course {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 17px;
+    width: 100%;
+    max-width: 312px;
+
+    position: relative;
+
+    &-logo {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+
+        &--blue {
+            background: $one-light;
+            color:$one-darker;
+        }
+
+        &--green {
+            background:$two-light;
+            color: $two-darker;
+        }
+
+        &--orange {
+            background: $three-light;
+            color: $three-dark;
+        }
+
+    }
+
+    &-info {
+        margin-left: 15px;
+    }
+
+    &-name {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: $font-color-dark;
+    }
+
+    &-date,
+    &-difficulty {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 17px;
+        color: #83919E;
+        margin-top: 5px;
+    }
+}
+
