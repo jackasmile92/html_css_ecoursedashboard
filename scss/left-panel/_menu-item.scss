@@ -17,6 +17,8 @@
 }
 
 .left-panel__menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
     max-height: 350px;
     display: flex;
     flex-direction: column;
@@ -26,7 +28,7 @@
         color: $font-color-gray;
         display: grid;
         grid-template-columns: 1fr 2fr;
-        height: 30px;
+        height: 40px;
         align-items: center;
         justify-content: center;
         position: relative;
@@ -41,5 +43,19 @@
             cursor: default;
         }
 
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+
+    .left-panel__menu {
+        
+    &-item {
+        height: 50px;
+        
+        font-size: 20px;
+    }
     }
 }

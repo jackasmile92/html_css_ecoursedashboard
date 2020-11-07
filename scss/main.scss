@@ -33,8 +33,19 @@ a {
 
     display: grid;
     grid-template-columns: 2fr 6fr 3fr;
-
+/*
     height: 100vh;
 
-    min-height: 500px;
+    min-height: 500px;*/
 }
+
+@media screen and (min-width: 1440px) {
+
+    .wrapper {
+        margin: 0 auto;
+    
+        display: grid;
+        grid-template-columns: 3fr 5fr 3fr;         
+    }
+
+  }

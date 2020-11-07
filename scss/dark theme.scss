@@ -1,0 +1,227 @@
+$backgroung_color_darkgray: #383838;
+$backgroung_color_black: rgb(32, 32, 32);
+
+$banner-gray: #F5F5FB;
+
+$font-color-white: white;
+$font-color-gray: #9cb2c7;
+$font-color-gray2:#d5dbe6;
+$backgroung_color_light: #ffffff;
+$font-color-verydark:#d1d1d1;
+
+$main-color-purple: #5E81F4;
+
+
+//button
+
+%left-button{
+    background: $main-color-purple;
+    color: $font-color-white;
+}
+
+//dropdown
+
+.profile__dropdown-menu {
+    & a {
+        color: $font-color-gray2;
+        background-color: $backgroung_color_black;
+
+        &:hover {
+            color: $backgroung_color_light;
+            background-color: $backgroung_color_darkgray;
+        }
+    }
+}
+
+.profile__dropdown:hover .profile__dropdown-menu {
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.61);
+}
+
+.profile__dropdown-logout {
+    border-top: 1px solid $font-color-gray2;
+}
+
+//left panel
+.left-panel {
+    background: $backgroung_color_black;
+    
+    &__join {
+        &-button {
+            @extend %left-button;
+        }
+    }
+}
+
+.left-panel__menu {
+    &-item {
+        color: $font-color-gray;
+
+        &:hover {
+            color: $backgroung_color_light;
+        }
+
+        &--active {
+            color: $backgroung_color_light;
+            border-right: 4px solid $main-color-purple;
+        }
+
+    }
+}
+
+//logo
+.left-panel__logo {
+    &-square {
+        background-color: $main-color-purple;
+        color: $font-color-white;
+    }
+
+    &-text {
+        color: $main-color-purple;
+    }
+}
+
+.left-panel__upgrade {
+
+    background: $banner-gray;
+
+    /*&-text {
+        color: $font-color-gray2;
+    }*/
+    &-button {
+        @extend %left-button;
+    }
+}
+
+
+//middle part
+
+.course {
+    background: $backgroung_color_black;   
+}
+
+.course {
+    &__name {
+        color: $font-color-white;
+    }
+
+    &__lesson-number {
+        color: $font-color-white;
+    }
+
+    &__size {
+        color: $font-color-white;
+    }
+
+    &__run-button {
+        background: rgba(255, 255, 255, 0.3);
+
+        & i {
+            color: $font-color-white;
+        }
+    }
+
+    &__teacher {
+        border: 3px solid white;
+    }
+}
+
+
+.top-menu__searching {
+    background: $backgroung_color_black;
+
+    & i {
+        color: #AAB8C6;
+    }
+
+    &-input {
+        color: $backgroung_color_light;
+    }
+
+    & input[type="text"]{
+
+        background-color : $backgroung_color_black; 
+      
+      }
+}
+
+
+// middle part
+
+
+.middle-part {
+    background: $backgroung_color_darkgray;
+}
+
+
+.top-menu {
+
+    &__notifiaction i {
+        color: #768492;
+    }
+}
+
+.courses {
+
+    &__category {
+        color: $font-color-gray;
+
+        &:hover {
+            color: $main-color-purple;
+        }
+
+        &--active {
+            color: $main-color-purple;
+
+
+            & span {
+                background: $main-color-purple;
+            }
+        }
+
+
+        &-name {
+            color: $backgroung_color_light;
+        }
+    }
+
+}
+
+
+
+//right part
+.right-part__course {
+    &-name {
+        color: $backgroung_color_light;
+    }
+
+    &-date,
+    &-difficulty {
+        color: #83919E;
+    }
+}
+
+.profile {
+    &__name {
+        color: $backgroung_color_light;
+    }
+
+    &__tip {
+        & i {
+            color: $backgroung_color_light;
+        }
+    }
+}
+
+.right-part {
+    background: $backgroung_color_black;
+
+    &__profile {
+        background-color: $backgroung_color_black;
+    }
+}
+
+.right-part {
+    &__item-title {
+        color: $font-color-gray2;
+    }
+}
