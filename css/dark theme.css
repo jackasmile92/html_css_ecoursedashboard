@@ -56,6 +56,9 @@
 
 .course {
   background: #202020;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .course__name {
