@@ -1,13 +1,14 @@
 .profile__dropdown {
     position: relative;
     display: inline-block;
+    
 }
 
 .profile__dropdown-menu {
     display: none;
     position: absolute;
-    width: 100px;
-
+    width: 125px;
+background-color: $backgroung_color_white;
     & a {
         color: $font-color-gray2;
         background-color: $backgroung_color_white;

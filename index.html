@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<!-- https://www.youtube.com/watch?v=k7x-fslRWcw&ab_channel=OnlineTutorials -->
+    <!-- https://www.youtube.com/watch?v=k7x-fslRWcw&ab_channel=OnlineTutorials -->
     <div id="loader__wrapper">
         <div class="loader">
             <div class="ball"></div>
@@ -226,6 +226,14 @@
                         <div class="profile__dropdown-menu">
                             <a href="#">Profile</a>
                             <a href="#">Settings</a>
+                            <div class="toggle-theme__wrapper">
+                                <div class="toggle-text">Theme</div>
+                                <label class="toggle-theme">
+                                    <input onchange="themeToggle()" type="checkbox">
+                                    <span></span>
+                                    <i class="indicator"></i>
+                                </label>
+                            </div>
                             <a class="profile__dropdown-logout" href="#">Log out</a>
                         </div>
                     </div>
@@ -321,23 +329,23 @@
             </div>
         </div>
     </div>
-    <button onclick="myFunction()">Toggle dark mode</button>
 
-<script>
-function myFunction() {
 
-    var style = document.getElementById("dark-mode");
-    console.log( style.disabled);
+    <script>
+        function themeToggle() {
 
-    if( style.disabled) {
-        style.disabled = false;
-    } else {
-        style.disabled = true;
-    }
+            var style = document.getElementById("dark-mode");
+            console.log(style.disabled);
 
-    console.log( style.disabled);
-}
-</script>
+            if (style.disabled) {
+                style.disabled = false;
+            } else {
+                style.disabled = true;
+            }
+
+            console.log(style.disabled);
+        }
+    </script>
 </body>
 
 </html>

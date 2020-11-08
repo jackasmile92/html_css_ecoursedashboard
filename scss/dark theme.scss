@@ -12,9 +12,11 @@ $font-color-verydark:#d1d1d1;
 $main-color-purple: #5E81F4;
 
 
+@import './right-part/color-vars';
+
 //button
 
-%left-button{
+%left-button {
     background: $main-color-purple;
     color: $font-color-white;
 }
@@ -22,6 +24,8 @@ $main-color-purple: #5E81F4;
 //dropdown
 
 .profile__dropdown-menu {
+    background-color: $backgroung_color_black;
+
     & a {
         color: $font-color-gray2;
         background-color: $backgroung_color_black;
@@ -44,7 +48,7 @@ $main-color-purple: #5E81F4;
 //left panel
 .left-panel {
     background: $backgroung_color_black;
-    
+
     &__join {
         &-button {
             @extend %left-button;
@@ -96,7 +100,7 @@ $main-color-purple: #5E81F4;
 //middle part
 
 .course {
-    background: $backgroung_color_black;   
+    background: $backgroung_color_black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -140,11 +144,11 @@ $main-color-purple: #5E81F4;
         color: $backgroung_color_light;
     }
 
-    & input[type="text"]{
+    & input[type="text"] {
 
-        background-color : $backgroung_color_black; 
-      
-      }
+        background-color: $backgroung_color_black;
+
+    }
 }
 
 
@@ -227,4 +231,51 @@ $main-color-purple: #5E81F4;
     &__item-title {
         color: $font-color-gray2;
     }
+}
+
+//toggle
+.toggle-theme {
+
+    &__wrapper {
+        background-color: $backgroung_color_black;
+        color: $font-color-gray2;
+    }
+
+    & span {
+        background: rgb(22, 22, 22);
+
+        box-shadow: inset 0 2px 15px rgba(0, 0, 0, .2),
+            inset 0 2px 2px rgba(0, 0, 0, .2),
+            inset 0 -1px 1px rgba(0, 0, 0, .2);
+    }
+
+    & .indicator {
+        background: linear-gradient(to bottom, #444, #222);
+
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, .5),
+            inset 0 1px 1px rgba(255, 255, 255, .1);
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            background: $three-dark;
+            border-radius: 50%;
+            box-shadow: inset 0 0 2px $three-dark,
+                inset 0 0 5px $three-dark,
+                inset 0 0 10px $three-dark,
+                inset 0 0 15px $three-dark,
+                inset 0 0 20px $three-dark,
+                inset 0 0 25px $three-dark,
+                inset 0 0 30px $three-dark,
+                inset 0 0 40px $three-dark;
+
+        }
+    }
+
 }

@@ -1,0 +1,91 @@
+.toggle-theme {
+    position: relative;
+    cursor: pointer;
+
+    &__wrapper {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        background-color:  $backgroung_color_white;
+
+        color: $font-color-gray2;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 30px;
+        padding-left: 20px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+
+    & input {
+        appearance: none;
+        display: none;
+    }
+
+    & span {
+        position: relative;
+        display: block;
+        width: 80px;
+        height: 40px;
+        background: rgb(196, 196, 196);
+
+        border-radius: 40px;
+        box-shadow: inset 0 2px 15px rgba(87, 87, 87, 0.2),
+            inset 0 2px 2px rgba(87, 87, 87, 0.2),
+            inset 0 -1px 1px rgba(87, 87, 87, 0.2);
+    }
+
+    & .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(206, 206, 206));
+        border-radius: 50%;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.199),
+            inset 0 1px 1px rgba(255, 255, 255, 0.308);
+        transition: .5s;
+        transform: scale(.9);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            background: #f00;
+            border-radius: 50%;
+            box-shadow: inset 0 0 2px #f00,
+                inset 0 0 5px #f00,
+                inset 0 0 10px #f00,
+                inset 0 0 15px #f00,
+                inset 0 0 20px #f00,
+                inset 0 0 25px #f00,
+                inset 0 0 30px #f00,
+                inset 0 0 40px #f00;
+
+        }
+    }
+
+
+    & input:checked~.indicator {
+        left: 40px;
+
+        &::before {
+            background: $main-color-purple;
+            box-shadow: inset 0 0 2px $main-color-purple,
+                inset 0 0 5px $main-color-purple,
+                inset 0 0 10px $main-color-purple,
+                inset 0 0 15px $main-color-purple,
+                inset 0 0 20px $main-color-purple,
+                inset 0 0 25px $main-color-purple,
+                inset 0 0 30px $main-color-purple,
+                inset 0 0 40px $main-color-purple;
+
+        }
+    }
+}
