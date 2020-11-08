@@ -239,6 +239,10 @@ $main-color-purple: #5E81F4;
     &__wrapper {
         background-color: $backgroung_color_black;
         color: $font-color-gray2;
+        
+        &:hover{
+            background-color: $backgroung_color_darkgray;
+        }
     }
 
     & span {

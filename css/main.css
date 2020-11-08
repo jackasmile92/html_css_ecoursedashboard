@@ -736,7 +736,7 @@
 
 .toggle-theme__wrapper {
   margin-top: 5px;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   background-color: white;
   color: #778DAD;
   font-family: Inter;
@@ -745,6 +745,10 @@
   font-size: 12px;
   line-height: 30px;
   padding-left: 20px;
+}
+
+.toggle-theme__wrapper:hover {
+  background-color: #E5E5E5;
 }
 
 .toggle-theme input {
