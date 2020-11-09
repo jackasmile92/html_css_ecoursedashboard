@@ -488,6 +488,31 @@
   grid-template: "big big" "small1 small2";
 }
 
+@media screen and (max-width: 1250px) {
+  .courses__table {
+    grid-template: "big" "small1" "small2";
+  }
+  .courses__categories {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  .courses__category {
+    margin-bottom: 5px;
+    text-align: right;
+  }
+  .courses__category--active span {
+    display: block;
+    position: absolute;
+    background: #5E81F4;
+    left: calc(50% + 12.5px);
+    bottom: 0;
+    width: 15px;
+    height: 2px;
+    margin-top: 10px;
+  }
+}
+
 .right-part__banner {
   margin-left: 32px;
   margin-bottom: 24px;
@@ -836,5 +861,13 @@ a {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 5fr 3fr;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .wrapper {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
   }
 }

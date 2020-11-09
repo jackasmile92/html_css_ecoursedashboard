@@ -49,3 +49,15 @@ a {
     }
 
   }
+
+
+  @media screen and (max-width: 1250px) {
+
+    .wrapper {
+        margin: 0 auto;
+    
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;         
+    }
+
+  }
