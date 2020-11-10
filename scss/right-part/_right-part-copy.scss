@@ -1,0 +1,61 @@
+@media screen and (max-width: 1000px) {
+    body{
+        overflow: hidden;
+    }
+
+    .toggle, .toggleb {
+        display: initial;
+    }
+
+    .right-part--copy {
+        transition: .5s ease-out;
+        display: initial;
+        background: $backgroung_color_white;
+
+        position: absolute;
+        right: -90%;
+        top: 0;
+
+        height: 100vh;
+        overflow-y: scroll;
+        background: $backgroung_color_white;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        & .container {
+            width: 400px;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & .right-part__tasks {
+                margin-top: 50px;
+            }
+
+            & .right-part__progress {
+                padding-top: 25px;
+            }
+        }
+
+        &__profile {
+            position: absolute;
+            z-index: 99;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-top: 12px;
+            height: 80px;
+            background-color: $backgroung_color_white;
+       
+        }
+    }
+
+
+
+}

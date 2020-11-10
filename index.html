@@ -92,6 +92,7 @@
             </div>
         </div>
         <div class="middle-part">
+            <div class="toggle"><a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
             <div class="top-menu">
                 <div class="container">
                     <div class="top-menu__searching">
@@ -330,6 +331,124 @@
         </div>
     </div>
 
+    <div class="right-part--copy">
+        <div class="toggleb"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>
+            
+        <div class="container">
+            <div class="right-part--copy__profile">
+                <div class="profile__photo">
+                    <img class="profile__photo-img" src="./src/img/png/Rectangle 100.png" alt="">
+                </div>
+                <div class="profile__name">Alexa Rogue</div>
+                <div class="profile__dropdown">
+                    <a class="profile__tip profile__tip-down">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="profile__dropdown-menu">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <div class="toggle-theme__wrapper">
+                            <div class="toggle-text">Theme</div>
+                            <label class="toggle-theme">
+                                <input onchange="themeToggle()" type="checkbox">
+                                <span></span>
+                                <i class="indicator"></i>
+                            </label>
+                        </div>
+                        <a class="profile__dropdown-logout" href="#">Log out</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-part__progress">
+                <div class="right-part__item-title">
+                    Progress
+                </div>
+                <div class="right-part__course">
+                    <div class="right-part__course-logo right-part__course-logo--blue">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-part__course-info">
+                        <a class="right-part__course-name" href="#">UI/UX Design</a>
+                        <div class="right-part__course-difficulty">Advanced</div>
+                    </div>
+                    <div class="right-part__course-progress right-part__course-progress--blue">
+                        <div class="right-part__course-bar right-part__course-bar--one"></div>
+                    </div>
+                </div>
+
+                <div class="right-part__course">
+                    <div class="right-part__course-logo  right-part__course-logo--green">
+                        <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-part__course-info">
+                        <a class="right-part__course-name" href="#">Photography</a>
+                        <div class="right-part__course-difficulty">Intermediate</div>
+                    </div>
+                    <div class="right-part__course-progress right-part__course-progress--green">
+                        <div class="right-part__course-bar right-part__course-bar--two"></div>
+                    </div>
+                </div>
+
+                <div class="right-part__course">
+                    <div class="right-part__course-logo  right-part__course-logo--orange">
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-part__course-info">
+                        <a class="right-part__course-name" href="#">Animation</a>
+                        <div class="right-part__course-difficulty">Advanced</div>
+                    </div>
+                    <div class="right-part__course-progress right-part__course-progress--orange">
+                        <div class="right-part__course-bar right-part__course-bar--three"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-part__tasks">
+                <div class="right-part__item-title">
+                    Upcoming Task
+                </div>
+                <div class="right-part__course">
+                    <div class="right-part__course-logo  right-part__course-logo--blue">
+                        <i class="fa fa-comments-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-part__course-info">
+                        <a class="right-part__course-name" href="#">UI/UX - Discussion</a>
+                        <div class="right-part__course-date">27 Oct 2020, Tuesday</div>
+                    </div>
+                </div>
+
+                <div class="right-part__course">
+                    <div class="right-part__course-logo  right-part__course-logo--orange">
+                        <i class="fa fa-cube" aria-hidden="true"></i>
+                    </div>
+                    <div class="right-part__course-info">
+                        <a class="right-part__course-name" href="#">Animation - 3D Animation</a>
+                        <div class="right-part__course-date">27 Oct 2020, Tuesday</div>
+                    </div>
+                    <div class="right-part__course-progress">
+                        <div class="right-part__course-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-part__banner">
+                <div class="banner">
+                    <div class="banner__title">Download Ohara
+                        Now!
+                    </div>
+                    <div class="banner__links">
+                        <a class="banner__link" href="#">
+                            <img class="banner__link-logo" src="./src/img/png/playstore.png" alt="">
+                        </a>
+                        <a class="banner__link" href="#">
+                            <i class="fa fa-apple" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function themeToggle() {
@@ -342,6 +461,27 @@
                 style.disabled = true;
             }
         }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(
+            function () {
+                $('.toggle a').click(function () {
+                    $(".right-part--copy").css({ right: "0" });
+                    $(".right-part--copy__profile").css({position: "fixed" });
+                });
+             
+            } );
+            $(document).ready(
+            function () {
+                $('.toggleb a').click(function () {
+                    $(".right-part--copy").css({ right: "-90%" });
+                    $(".right-part--copy__profile").css({ position: "absolute" });
+                });
+             
+            }
+            );
+           
     </script>
 </body>
 

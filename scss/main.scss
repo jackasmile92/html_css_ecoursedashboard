@@ -61,3 +61,20 @@ a {
     }
 
   }
+
+
+  
+  @media screen and (max-width: 1000px) {
+
+    .wrapper {
+        margin: 0 auto;
+    
+        display: grid;
+        grid-template-columns: 1fr 3fr;       
+        
+        & .right-part {
+            display: none;
+        }
+    }
+
+  }

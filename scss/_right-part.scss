@@ -3,8 +3,20 @@ $rght-part-mrgleft:32px;
 @import './right-part/banner';
 @import './right-part/course';
 @import './right-part/profile';
+@import './right-part/right-part-copy';
+
+.toggle,
+.toggleb {
+    display: none;
+}
 
 .right-part {
+    &--copy {
+        display: none;
+    }
+
+
+
     height: 100vh;
     overflow-y: scroll;
     background: $backgroung_color_white;
@@ -39,7 +51,7 @@ $rght-part-mrgleft:32px;
         margin-left: $rght-part-mrgleft;
     }
 
-    &__progress{
+    &__progress {
         margin-top: 122px;
     }
 
@@ -52,3 +64,42 @@ $rght-part-mrgleft:32px;
         margin-bottom: 20px;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .right-part--copy {
+        display: initial;
+    }
+
+    .toggle,
+    .toggleb {
+        display: initial;
+        width: 30px;
+        height: 30px;
+        background: $backgroung_color_white;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+        & a{
+            
+        color: #768492;
+        }
+    }
+
+    .toggle
+        {
+        position: absolute;
+        right: 0;
+        margin-right: -5px;
+        padding-right: 5px;
+    }
+
+    .toggleb
+    {
+    position: fixed;
+    z-index: 100;
+}
+}
+
