@@ -7,6 +7,7 @@
 
     &--big {
         grid-area: big;
+
     }
 
     &:nth-child(1) {
@@ -20,6 +21,21 @@
 
     &:nth-child(3) {
         grid-area: small2;
+        background-image: url('../src/img/png/image\ 24.png');
+    }
+
+    &:nth-child(4) {
+        grid-area: big1;
+        background-image: url('../src/img/png/image\ 20.png');
+    }
+
+    &:nth-child(5) {
+        grid-area: small3;
+        background-image: url('../src/img/png/image\ 23.png');
+    }
+
+    &:nth-child(6) {
+        grid-area: small4;
         background-image: url('../src/img/png/image\ 24.png');
     }
 

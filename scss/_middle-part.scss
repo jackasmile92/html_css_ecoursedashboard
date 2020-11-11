@@ -127,7 +127,9 @@
         grid-gap: 20px;
         grid-template:
             "big big"
-            "small1 small2";
+            "small1 small2"
+            " small4 big1"
+            " small4 small3";
     }
 }
 
@@ -140,7 +142,10 @@
             grid-template:
                 "big"
                 "small1"
-                "small2";
+                "small2"
+                "big1"
+                "small3"
+                "small4";
         }
 
         &__categories {

@@ -1,9 +1,10 @@
 @media screen and (max-width: 1000px) {
-    body{
+    body {
         overflow: hidden;
     }
 
-    .toggle, .toggleb {
+    .toggle,
+    .toggleb {
         display: initial;
     }
 
@@ -52,10 +53,18 @@
             padding-top: 12px;
             height: 80px;
             background-color: $backgroung_color_white;
-       
+
         }
     }
 
 
 
+}
+
+@media screen and (max-width: 768px) {
+    .right-part--copy {
+        & .container {
+            width: 350px;
+        }
+    }
 }
